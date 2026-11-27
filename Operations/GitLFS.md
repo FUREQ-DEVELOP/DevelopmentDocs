@@ -1,0 +1,3 @@
+# Git LFS
+
+GitHub Free for Organizationsの公開情報では10 GiB storageと10 GiB bandwidth。超過を避けるため初期は大容量データを転送しません。制作元をSubmodule取得時に自動ダウンロードしない設計を検討。LFS予算を0に設定できるか請求担当者が確認するまで大容量運用を開始しない。

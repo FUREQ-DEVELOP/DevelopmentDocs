@@ -1,0 +1,3 @@
+# Actions運用
+
+Organization allowlistはcheckout、Astro action、Pages deployに限定済み。基盤のSubmodule更新workflowは外部Actionを使わず、毎週/手動でPRを作る設計です。Org policyによりworkflow_dispatchの書込トークン挙動を実機確認できるまで自動更新は未検証扱いです。
