@@ -13,7 +13,7 @@
 - 請求対策: Actions/LFS/Packages/Codespaces全て$0 budgetと超過時停止をBilling APIで確認。LFS大容量転送なし。
 
 ## PRで構築中 (mainには未反映)
-- PHASE 05: 12 direct Submodule + nested RenderingLibrary gitlink、HTTPS URL。全gitlink mode 160000、各SHAはchild remote mainで確認。
+- PHASE 05: 12 direct SubmoduleをPRに登録。GameEngine PRにはnested RenderingLibraryを登録。全gitlink mode 160000、各SHAはchild remote mainで確認。Game-001の未認証recursive cloneではdirect 5件を取得できたが、nested RenderingLibraryはGameEngineの新gitlinkがまだ親repoに取り込まれていないため未取得。GameEngine PR merge後に親workflowを手動実行し、更新PRを作って伝播させる。
 - PHASE 06: RenderingWorkspace, GameEngine, EngineWorkspace, Game-001に更新PR workflow。
 - PHASE 07: Game-001-Art LFS/ignore設定。
 - PHASE 08: CODEOWNERS、PR運用テンプレート、Gitルール。
@@ -41,8 +41,8 @@
 - 14 PRの公開内容とdiffを人間がレビュー・承認し、branch protection経由でmergeする。認証ユーザー自身で承認/迂回していない。
 - Merge後、GitHub ActionsでSubmodule clean clone、`workflow_dispatch`、重複PR防止/更新伝播を実行検証する。
 - GitHub Desktopの実アプリから取得するUI試験、および一般メンバー権限によるclone/PR試験は未実施。手順はマニュアルに記載。
-- Projectの空状態での表示は確認。taskの実データがないため全ビュー絞り込み結果は未検証。
-- Issue Forms YAMLは構造レビューのみ。ブラウザ上のフォーム描画確認は未実施。
+- Projectの空状態、公開設定、14 repo/9 team Master Roadmap連携、担当Project link、fieldsとviewsを確認。実taskがないため絞り込み結果は未検証。
+- 101個のIssue Forms YAMLを修正・構造検査中。ブラウザ上のフォーム描画確認は未実施。
 - `Site` は初期14 repoの対象外。公開状態以外のtopics/branch rules/workflowは変更していない。
 - 無料枠残量を超えるビルドやLFS通信は実行していない。
 
