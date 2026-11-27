@@ -1,3 +1,5 @@
 # Git LFS
 
-GitHub Free for Organizationsの公開情報では10 GiB storageと10 GiB bandwidth。超過を避けるため初期は大容量データを転送しません。制作元をSubmodule取得時に自動ダウンロードしない設計を検討。LFS予算を0に設定できるか請求担当者が確認するまで大容量運用を開始しない。
+`Game-001-Art/.gitattributes` はBLEND/FBX/PSD/SPP/EXR/TIF/TIFF/WAV/AIF/AIFF/MOV/MP4をLFS対象にします。大きなテストファイルやLFS payloadは送っていません。
+
+GitHub公式情報ではFree for OrganizationsにLFS storage/bandwidth各10 GiBが含まれ、予算を$0に設定すると超過分は課金されず当月のLFS利用が停止します。今回GitHub Billing APIで `git_lfs` 組織予算$0、`prevent_further_usage=true` を確認しました。2026年usage summaryにはLFS利用項目なし。制作元を含むrecursive cloneはLFS smudgeを避けてください。
