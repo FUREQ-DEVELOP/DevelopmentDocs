@@ -42,7 +42,7 @@
 - Merge後、GitHub ActionsでSubmodule clean clone、`workflow_dispatch`、重複PR防止/更新伝播を実行検証する。
 - GitHub Desktopの実アプリから取得するUI試験、および一般メンバー権限によるclone/PR試験は未実施。手順はマニュアルに記載。
 - Projectの空状態、公開設定、14 repo/9 team Master Roadmap連携、担当Project link、fieldsとviewsを確認。実taskがないため絞り込み結果は未検証。
-- 101個のIssue Forms YAMLを修正・構造検査中。ブラウザ上のフォーム描画確認は未実施。
+- 101個のIssue Forms YAMLと4 workflow YAMLをPyYAMLでparseし、必要key/field/type/idを構造検査、エラー0。ブラウザ上のフォーム描画確認は未実施。
 - `Site` は初期14 repoの対象外。公開状態以外のtopics/branch rules/workflowは変更していない。
 - 無料枠残量を超えるビルドやLFS通信は実行していない。
 
